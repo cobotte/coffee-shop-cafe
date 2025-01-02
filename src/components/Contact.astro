@@ -1,0 +1,46 @@
+---
+---
+<section id="contact" style="padding:7rem 4rem;background:var(--espresso)">
+  <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+    <div class="reveal-left">
+      <p style="font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem"><span style="display:block;width:2rem;height:1px;background:var(--caramel)"></span>Visit Us</p>
+      <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;color:var(--warm);margin-bottom:2rem">Come say hello</h2>
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div>
+          <div style="font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,244,.4);margin-bottom:.4rem">Address</div>
+          <div style="font-size:.88rem;color:rgba(250,248,244,.7);line-height:1.6">42 Alderwick Lane<br />Shoreditch, London E1 6QP</div>
+        </div>
+        <div>
+          <div style="font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,244,.4);margin-bottom:.4rem">Hours</div>
+          <div style="font-size:.88rem;color:rgba(250,248,244,.7);line-height:1.6">Mon–Fri: 7:00 am – 6:00 pm<br />Sat–Sun: 8:00 am – 5:00 pm</div>
+        </div>
+        <div>
+          <div style="font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,244,.4);margin-bottom:.4rem">Contact</div>
+          <a href="mailto:hello@brewandco.com" style="font-size:.88rem;color:var(--caramel);transition:opacity .25s" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">hello@brewandco.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <h3 style="font-family:var(--font-serif);font-size:1.3rem;font-weight:400;color:var(--warm);margin-bottom:1.5rem">Send us a message</h3>
+      <form id="contactForm" novalidate style="display:flex;flex-direction:column;gap:1rem">
+        <div class="cf" style="display:flex;flex-direction:column;gap:.4rem">
+          <label for="cf-name" style="font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,244,.4)">Name</label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);outline:none;padding:.85rem 1rem;color:var(--warm);font-family:var(--font-sans);font-size:.88rem;border-radius:var(--radius);transition:border-color .25s" />
+        </div>
+        <div class="cf" style="display:flex;flex-direction:column;gap:.4rem">
+          <label for="cf-email" style="font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,244,.4)">Email</label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);outline:none;padding:.85rem 1rem;color:var(--warm);font-family:var(--font-sans);font-size:.88rem;border-radius:var(--radius);transition:border-color .25s" />
+        </div>
+        <div class="cf" style="display:flex;flex-direction:column;gap:.4rem">
+          <label for="cf-msg" style="font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,248,244,.4)">Message</label>
+          <textarea id="cf-msg" name="message" rows="4" required style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);outline:none;padding:.85rem 1rem;color:var(--warm);font-family:var(--font-sans);font-size:.88rem;border-radius:var(--radius);resize:vertical;transition:border-color .25s"></textarea>
+        </div>
+        <button type="submit" style="background:var(--caramel);color:var(--espresso);padding:.9rem 2rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border:none;border-radius:var(--radius);transition:background .25s;align-self:flex-start">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+<style>
+  input:focus, textarea:focus { border-color: var(--caramel) !important; }
+  @media(max-width:768px){section{padding:4rem 1.2rem!important}div[style*="grid-template-columns"]{grid-template-columns:1fr!important}}
+</style>

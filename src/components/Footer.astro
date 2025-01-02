@@ -1,0 +1,13 @@
+---
+const year = new Date().getFullYear();
+---
+<footer style="padding:2.5rem 4rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem" role="contentinfo">
+  <div style="font-family:var(--font-serif);font-size:1.2rem;color:var(--espresso)">Brew &amp; Co.</div>
+  <nav style="display:flex;gap:2rem;flex-wrap:wrap" aria-label="Footer navigation">
+    <a href="/#menu" style="font-size:.72rem;color:var(--muted);transition:color .25s" onmouseover="this.style.color='var(--espresso)'" onmouseout="this.style.color='var(--muted)'">Menu</a>
+    <a href="/#story" style="font-size:.72rem;color:var(--muted);transition:color .25s" onmouseover="this.style.color='var(--espresso)'" onmouseout="this.style.color='var(--muted)'">Our Story</a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="font-size:.72rem;color:var(--muted);transition:color .25s" onmouseover="this.style.color='var(--espresso)'" onmouseout="this.style.color='var(--muted)'">Instagram</a>
+  </nav>
+  <p style="font-size:.72rem;color:var(--muted)">© {year} Brew &amp; Co. All rights reserved.</p>
+</footer>
+<style>@media(max-width:768px){footer{padding:2rem 1.2rem!important;flex-direction:column;text-align:center}nav{justify-content:center}}</style>

@@ -1,0 +1,29 @@
+---
+const panels = [
+  { label: 'The Bar', desc: 'Hand-crafted espresso station' },
+  { label: 'The Lounge', desc: 'Cosy seating, unlimited refills' },
+  { label: 'The Terrace', desc: 'Open in summer, dog-friendly' },
+];
+---
+<section id="gallery" style="padding:7rem 4rem;background:var(--sand)">
+  <div class="reveal" style="margin-bottom:4rem">
+    <p style="font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem"><span style="display:block;width:2rem;height:1px;background:var(--caramel)"></span>The Space</p>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.2;color:var(--espresso)">Come in,<br />stay a while</h2>
+  </div>
+  <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
+    {panels.map((p,i) => (
+      <div style={`aspect-ratio:${i===1?'4/5':'3/4'};position:relative;overflow:hidden;border-radius:var(--radius);cursor:pointer`}>
+        <div style={`position:absolute;inset:0;background:linear-gradient(${i===0?'145deg,#4a2c18,#2d1b0e':i===1?'160deg,#3d2412,#261509':'135deg,#5c3520,#2d1b0e'});transition:transform .6s ease`} class="gal-bg"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5),transparent 50%)"></div>
+        <div style="position:absolute;bottom:1.5rem;left:1.5rem">
+          <div style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.75)">{p.label}</div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.2rem">{p.desc}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+<style>
+  .gal-bg:hover { transform: scale(1.06); }
+  @media(max-width:768px){section{padding:4rem 1.2rem!important}div[style*="grid-template-columns"]{grid-template-columns:1fr!important}}
+</style>
