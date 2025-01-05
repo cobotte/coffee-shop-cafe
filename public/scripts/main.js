@@ -13,10 +13,14 @@ const form = document.getElementById('contactForm');
 form?.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = form.querySelector('button[type=submit]');
-  if (!(btn instanceof HTMLButtonElement)) return;
-  const name = (document.getElementById('cf-name') as HTMLInputElement)?.value.trim();
-  const email = (document.getElementById('cf-email') as HTMLInputElement)?.value.trim();
-  const msg = (document.getElementById('cf-msg') as HTMLTextAreaElement)?.value.trim();
+  if (!btn) return;
+  const nameEl = document.getElementById('cf-name');
+  const emailEl = document.getElementById('cf-email');
+  const msgEl = document.getElementById('cf-msg');
+
+  const name = nameEl ? nameEl.value.trim() : '';
+  const email = emailEl ? emailEl.value.trim() : '';
+  const msg = msgEl ? msgEl.value.trim() : '';
 
   if (!name || !email || !msg) { showToast('Please fill in all fields.', true); return; }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showToast('Please enter a valid email.', true); return; }
@@ -27,10 +31,10 @@ form?.addEventListener('submit', async (e) => {
   form.reset();
   btn.textContent = 'Send Message →';
   btn.disabled = false;
-  showToast('Message sent! We'll be in touch soon. ☕');
+  showToast("Message sent! We'll be in touch soon. ☕");
 });
 
-function showToast(msg: string, error = false) {
+function showToast(msg, error = false) {
   const t = document.createElement('div');
   t.className = 'toast';
   t.textContent = msg;
