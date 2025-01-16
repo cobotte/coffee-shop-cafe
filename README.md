@@ -2,6 +2,8 @@
 
 > A warm neighbourhood coffee shop website built with **Astro 4**, TypeScript, and vanilla CSS.
 
+**🌐 Live Demo:** [cobotte.github.io/coffee-shop-cafe](https://cobotte.github.io/coffee-shop-cafe/)
+
 ![Astro](https://img.shields.io/badge/Astro-4-orange?logo=astro)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 

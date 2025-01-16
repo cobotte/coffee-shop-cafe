@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import storyCoffee from '../assets/images/story_coffee_shop.png';
 ---
-<section id="story" style="padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;background:var(--espresso)">
+<section id="story" style="padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;background:var(--dark-bg)">
   <div class="reveal-left" style="aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;position:relative">
     <Image src={storyCoffee} alt="Cozy Coffee Shop Corner" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" />
     <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65),transparent 60%)"></div>
@@ -12,7 +12,7 @@ import storyCoffee from '../assets/images/story_coffee_shop.png';
   </div>
   <div class="reveal-right">
     <p style="font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem"><span style="display:block;width:2rem;height:1px;background:var(--caramel)"></span>Our Story</p>
-    <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.2;margin-bottom:1.5rem;color:var(--warm)">A corner shop with a<br />big <em style="font-style:italic;color:var(--caramel)">heart</em></h2>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.2;margin-bottom:1.5rem;color:var(--dark-text)">A corner shop with a<br />big <em style="font-style:italic;color:var(--caramel)">heart</em></h2>
     <p style="font-size:.88rem;color:rgba(250,248,244,.55);line-height:1.85;margin-bottom:1.2rem">Started in 2017 with a second-hand espresso machine, a lease on this corner shop, and an unwavering belief that great coffee doesn't need to be complicated — just careful.</p>
     <p style="font-size:.88rem;color:rgba(250,248,244,.55);line-height:1.85;margin-bottom:2rem">We source directly from small farms in Ethiopia, Guatemala, and Colombia — visiting our partners annually to ensure fair pricing and sustainable practices.</p>
     <div style="display:flex;gap:2.5rem;flex-wrap:wrap">

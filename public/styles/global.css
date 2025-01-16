@@ -4,9 +4,18 @@
   --sand:#f5f0e8;--warm:#faf8f4;--espresso:#2d1b0e;--brown:#5c3d2e;
   --cream:#f9f3e8;--caramel:#c4892a;--caramel-lt:#d4a44a;
   --muted:#8a7a6a;--border:#e8dfd0;--red:#b03020;
+  --nav-bg:rgba(250,248,244,.94);--dark-bg:#2d1b0e;--dark-text:#faf8f4;
   --font-serif:'DM Serif Display',Georgia,serif;
   --font-sans:'Inter',system-ui,sans-serif;
   --ease:.25s ease;--radius:4px;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --warm:#180d05;--cream:#21130a;--sand:#2a1a10;
+    --espresso:#faf8f4;--brown:#e6dacb;--muted:#a69282;
+    --border:#382214;--nav-bg:rgba(24,13,5,.94);
+    --dark-bg:#120904;--dark-text:#faf8f4;
+  }
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--font-sans);background:var(--warm);color:var(--espresso);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
